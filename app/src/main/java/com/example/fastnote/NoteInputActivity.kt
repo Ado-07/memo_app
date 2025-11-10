@@ -1,5 +1,6 @@
 package com.example.fastnote
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
@@ -30,6 +31,11 @@ class NoteInputActivity : AppCompatActivity() {
                 finish()
             }
             .setNegativeButton("キャンセル") { _, _ -> finish() }
+            .setNeutralButton("アプリを開く") { _, _ ->
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
             .setOnCancelListener { finish() }
             .show()
     }
