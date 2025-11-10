@@ -26,7 +26,7 @@ class NoteWidgetProvider : AppWidgetProvider() {
     ) {
         val views = RemoteViews(context.packageName, R.layout.widget_note)
         val intent = Intent(context, NoteInputActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_MULTIPLE_TASK
         }
         val pendingIntent = PendingIntent.getActivity(
             context,

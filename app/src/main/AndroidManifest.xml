@@ -24,7 +24,7 @@
             android:name=".NoteInputActivity"
             android:theme="@style/Theme.FastNote.Transparent"
             android:exported="true"
-            android:taskAffinity=""
+            android:taskAffinity=".popup_task"
             android:excludeFromRecents="true" />
 
         <receiver
