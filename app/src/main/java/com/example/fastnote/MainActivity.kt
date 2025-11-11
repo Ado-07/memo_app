@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadNotes() {
         lifecycleScope.launch {
-            val notes = noteRepository.getNotes().toList()
+            val notes = noteRepository.getNotes()
             noteAdapter = NoteAdapter(notes)
             notesRecyclerView.adapter = noteAdapter
         }
