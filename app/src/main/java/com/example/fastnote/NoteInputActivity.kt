@@ -42,7 +42,7 @@ class NoteInputActivity : AppCompatActivity() {
             showTimePickerDialog(timeEditText)
         }
 
-        AlertDialog.Builder(this)
+        AlertDialog.Builder(this, R.style.PopDialogTheme)
             .setView(view)
             .setPositiveButton("保存") { _, _ ->
                 val title = titleEditText.text.toString()
