@@ -18,7 +18,7 @@
         android:id="@+id/button_open_app"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@android:drawable/ic_menu_send"
+        android:src="@android:drawable/ic_input_get"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"

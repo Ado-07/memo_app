@@ -20,7 +20,9 @@
             android:layout_weight="1"
             android:hint="日付"
             android:focusable="false"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorHint" />
 
         <EditText
             android:id="@+id/edit_text_time"
@@ -30,7 +32,9 @@
             android:layout_weight="1"
             android:hint="時刻"
             android:focusable="false"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorHint" />
     </LinearLayout>
 
     <EditText
@@ -40,7 +44,9 @@
         android:hint="タイトル"
         android:inputType="textCapSentences"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorHint="?android:attr/textColorHint" />
 
     <EditText
         android:id="@+id/edit_text_content"
@@ -50,6 +56,8 @@
         android:hint="内容"
         android:inputType="textMultiLine"
         android:minLines="3"
-        android:gravity="top"/>
+        android:gravity="top"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorHint="?android:attr/textColorHint" />
 
 </LinearLayout>
