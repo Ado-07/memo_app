@@ -24,8 +24,7 @@
         <item name="android:windowAnimationStyle">@style/NoAnimation</item>
     </style>
 
-    <style name="PopDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+    <style name="PopDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
         <item name="android:windowBackground">@drawable/dialog_background</item>
-        <item name="android:windowNoTitle">true</item>
     </style>
 </resources>

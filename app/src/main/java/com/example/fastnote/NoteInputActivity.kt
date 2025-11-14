@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -30,6 +31,7 @@ class NoteInputActivity : AppCompatActivity() {
         val contentEditText = view.findViewById<EditText>(R.id.edit_text_content)
         val dateEditText = view.findViewById<EditText>(R.id.edit_text_date)
         val timeEditText = view.findViewById<EditText>(R.id.edit_text_time)
+        val openAppButton = view.findViewById<ImageButton>(R.id.button_open_app)
 
         updateDateInView(dateEditText)
         updateTimeInView(timeEditText)
@@ -40,6 +42,12 @@ class NoteInputActivity : AppCompatActivity() {
 
         timeEditText.setOnClickListener {
             showTimePickerDialog(timeEditText)
+        }
+
+        openAppButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         AlertDialog.Builder(this, R.style.PopDialogTheme)
@@ -58,11 +66,6 @@ class NoteInputActivity : AppCompatActivity() {
                 finish()
             }
             .setNegativeButton("キャンセル") { _, _ -> finish() }
-            .setNeutralButton("アプリを開く") { _, _ ->
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }
             .setOnCancelListener { finish() }
             .show()
     }
